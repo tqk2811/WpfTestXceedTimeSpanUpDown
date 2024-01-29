@@ -11,19 +11,19 @@
         <local:MainWVM/>
     </Window.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
         <!--<StackPanel Orientation="Vertical" >-->
             <!--(1)-->
-            <Xceed:TimeSpanUpDown Grid.Row="0" Value="{Binding Path=TimeSpan}" ShowSeconds="False"/>
+            <!--<Xceed:TimeSpanUpDown Grid.Row="0" Value="{Binding Path=TimeSpan}" ShowSeconds="False"/>-->
 
             <ListView Grid.Row="1" ItemsSource="{Binding TimeList}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!--(2)-->
-                        <Xceed:TimeSpanUpDown Value="{Binding Time}" ShowDays="False"/>
+                        <Xceed:TimeSpanUpDown Value="{Binding Time}" ShowSeconds="False"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
