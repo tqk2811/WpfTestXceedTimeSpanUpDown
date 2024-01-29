@@ -9,29 +9,9 @@ namespace WpfTestXceedTimeSpanUpDown
 {
     internal class MainWVM
     {
-        public MainWVM()
-        {
-
-        }
-
         public TimeSpan TimeSpan { get; set; } = TimeSpan.FromHours(2);
         public ObservableCollection<TimeVM> TimeList { get; } = new ObservableCollection<TimeVM>()
         {
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
-            new TimeVM(),
             new TimeVM(),
             new TimeVM(),
             new TimeVM(),
