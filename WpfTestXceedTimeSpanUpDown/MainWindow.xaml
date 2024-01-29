@@ -11,26 +11,22 @@
         <local:MainWVM/>
     </Window.DataContext>
     <Grid>
-        <StackPanel Orientation="Vertical" >
-            <Xceed:TimeSpanUpDown Value="{Binding Path=TimeSpan}" ShowDays="False" ShowSeconds="False"/><!--(1)-->
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--<StackPanel Orientation="Vertical" >-->
+            <!--(1)-->
+            <Xceed:TimeSpanUpDown Grid.Row="0" Value="{Binding Path=TimeSpan}" ShowSeconds="False"/>
 
-            <ListView  MinHeight="60" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                    ItemsSource="{Binding TimeList}" 
-                    d:ItemsSource="{d:SampleData ItemCount=10}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
+            <ListView Grid.Row="1" ItemsSource="{Binding TimeList}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox VerticalAlignment="Center"/>
-                            <Xceed:TimeSpanUpDown Value="{Binding Time}" Maximum="23:59" Minimum="00:00" ShowDays="False"/><!--(2)-->
-                        </StackPanel>
+                        <!--(2)-->
+                        <Xceed:TimeSpanUpDown Value="{Binding Time}" ShowDays="False"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        <!--</StackPanel>-->
     </Grid>
 </Window>
